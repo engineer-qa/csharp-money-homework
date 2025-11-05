@@ -14,12 +14,4 @@ public class Money
     {
         Console.WriteLine($"Текущее состояние: {MainAmount},{SecondAmount}грн");
     }
-
-    public (int resultFirstAmount, int resultSecondAmount) SplitAmount(double amount)
-    {
-        var splitedAmount = amount.ToString().Split(',');
-        return splitedAmount.Length > 1
-            ? (int.Parse(splitedAmount.First()), int.Parse(splitedAmount.Last()))
-            : (int.Parse(splitedAmount.First()), 0);
-    }
 }
